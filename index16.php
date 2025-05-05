@@ -17,6 +17,19 @@
     foreach ($_POST as $key => $value) {
        echo"{$key} = {$value} <br>";
     }
+
+     if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if (empty($username)) {
+            echo "Please enter a username <br>";
+        } elseif (empty($password)) {
+            echo "Please enter a password <br>";
+        } else {
+            echo "Welcome {$username} <br>";
+        }
+    }
     ?>
 </body>
 </html>
